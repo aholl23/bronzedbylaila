@@ -1,7 +1,8 @@
 import { useEffect, useRef } from 'react';
 
 function Lightbox({ images, index, onClose, onNext, onPrev }) {
-  const touchStartX = useRef(null);
+  const touchStart = useRef(null);
+  const maxVertical = useRef(0);
 
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -17,16 +18,31 @@ function Lightbox({ images, index, onClose, onNext, onPrev }) {
     };
   }, [onClose, onNext, onPrev]);
 
+  const resetTouch = () => {
+    touchStart.current = null;
+    maxVertical.current = 0;
+  };
+
   const handleTouchStart = (event) => {
-    touchStartX.current = event.touches[0].clientX;
+    const touch = event.touches[0];
+    touchStart.current = { x: touch.clientX, y: touch.clientY };
+    maxVertical.current = 0;
+  };
+
+  const handleTouchMove = (event) => {
+    if (!touchStart.current) return;
+    const dy = Math.abs(event.touches[0].clientY - touchStart.current.y);
+    if (dy > maxVertical.current) maxVertical.current = dy;
   };
 
   const handleTouchEnd = (event) => {
-    if (touchStartX.current === null) return;
-    const deltaX = event.changedTouches[0].clientX - touchStartX.current;
+    if (!touchStart.current) return;
+    const deltaX = event.changedTouches[0].clientX - touchStart.current.x;
+    const wasScroll = maxVertical.current > 80;
+    resetTouch();
+    if (wasScroll) return;
     if (deltaX > 50) onPrev();
     else if (deltaX < -50) onNext();
-    touchStartX.current = null;
   };
 
   const current = images[index];
@@ -34,10 +50,12 @@ function Lightbox({ images, index, onClose, onNext, onPrev }) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-cocoa/70 backdrop-blur-md"
+      className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-cocoa/70 backdrop-blur-md touch-pan-y"
       onClick={onClose}
       onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
+      onTouchCancel={resetTouch}
     >
       <button
         onClick={onClose}
@@ -74,7 +92,8 @@ function Lightbox({ images, index, onClose, onNext, onPrev }) {
           src={current.src}
           alt={current.alt}
           onClick={(event) => event.stopPropagation()}
-          className="max-h-[75vh] max-w-[80vw] select-none object-contain shadow-palm sm:max-w-[70vw]"
+          draggable={false}
+          className="max-h-[75vh] max-w-[80vw] touch-pan-y select-none object-contain shadow-palm [-webkit-touch-callout:none] sm:max-w-[70vw]"
         />
       ) : (
         <div
