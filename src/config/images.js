@@ -10,13 +10,14 @@ export const heroCollageImages = {
   spraying: { id: 'hero-collage-spraying', label: 'Spray Gun', alt: 'Laila walking with spray guns', src: '/images/lailaspraygun.jpg' },
   bottles: { id: 'hero-collage-bottles', label: 'Norvell Bottles', alt: 'Norvell tanning bottles on sand', src: '/images/3bottles.jpg' },
   flatlay: { id: 'hero-collage-flatlay', label: 'Flatlay', alt: 'Bikini, phone, spray gun, and bottle flatlay', src: '/images/lailaaccesories.jpg' },
+  backView: { id: 'hero-collage-backview', label: 'Back View', alt: 'Back view of Laila in a white top and denim skirt with a Bronzed business card in her pocket', src: '/images/Laila-033.jpg' },
 };
 
 export const resultsSliderImages = [
-  { id: 'results-slider-1', label: 'Result — Before / After 1', alt: 'Before and after airbrush tan result 1', ratio: '4:5', src: null },
-  { id: 'results-slider-2', label: 'Result — Before / After 2', alt: 'Before and after airbrush tan result 2', ratio: '4:5', src: null },
-  { id: 'results-slider-3', label: 'Result — Before / After 3', alt: 'Before and after airbrush tan result 3', ratio: '4:5', src: null },
-  { id: 'results-slider-4', label: 'Result — Before / After 4', alt: 'Before and after airbrush tan result 4', ratio: '4:5', src: null },
+  { id: 'results-slider-1', label: 'Result — Gallery 1', alt: 'Blonde girl walking through shallow water in a white tee and jeans', ratio: '4:5', src: '/images/Laila-062.jpg' },
+  { id: 'results-slider-2', label: 'Result — Gallery 2', alt: 'Close-up of jewelry and hands on two girls in white tops and denim', ratio: '4:5', src: '/images/Laila-047.jpg' },
+  { id: 'results-slider-3', label: 'Result — Gallery 3', alt: 'Four girls holding hands on the beach, facing each other', ratio: '4:5', src: '/images/Laila-042.jpg' },
+  { id: 'results-slider-4', label: 'Result — Gallery 4', alt: 'Blonde girl in a white tank top posing by the water', ratio: '4:5', src: '/images/Laila-067.jpg' },
 ];
 
 export const resultsGridImages = [

@@ -44,6 +44,11 @@ function ElasticScroll({ children }) {
     };
 
     const handleWheel = (event) => {
+      if (event.ctrlKey || Math.abs(event.deltaX) >= Math.abs(event.deltaY)) {
+        if (offsetRef.current !== 0) springBack();
+        return;
+      }
+
       const scrollTop = window.scrollY;
       const atTop = scrollTop <= 0;
       const atBottom = scrollTop + window.innerHeight >= document.documentElement.scrollHeight - 1;

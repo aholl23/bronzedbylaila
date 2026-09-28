@@ -39,7 +39,7 @@ function Landing() {
       <Nav />
 
       <main id="top">
-        <section className="relative flex min-h-[85vh] items-center overflow-hidden px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+        <section className="relative flex min-h-[85vh] items-center overflow-hidden supports-[height:1svh]:min-h-[85svh] px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
           <HeroCollage />
           <div className="relative z-10 mx-auto flex max-w-2xl -translate-y-10 flex-col items-center px-4 py-1.5 text-center sm:-translate-y-12 lg:-translate-y-16">
             <HeroSun className="h-32 w-[21rem] text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.55)] sm:h-44 sm:w-[28rem]" />
@@ -67,6 +67,7 @@ function Landing() {
                   />
                 ))}
               </div>
+              <p className="mt-3 text-left text-sm text-bronze">Click to see more</p>
             </div>
           </section>
 
@@ -103,7 +104,7 @@ function Landing() {
           <section id="about" className="px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
             <div className="mx-auto max-w-6xl text-left">
               <p className="text-sm font-medium uppercase tracking-[0.35em] text-bronze">Why Bronzed?</p>
-              <h2 className="mt-3 font-display text-2xl font-medium sm:text-4xl">Proven Experience</h2>
+              <h2 className="mt-3 font-display text-3xl font-medium sm:text-4xl">Proven Experience</h2>
               <ImageSlot image={aboutLailaImage} className="mx-auto mt-8 max-w-[400px] md:mx-0" />
               <p className="mt-3 max-w-lg text-base text-cocoa">
                 With over 3 years of experience and Norvell professional-grade formulas, let me deliver your desired tan.

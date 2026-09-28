@@ -12,7 +12,7 @@ const navLinks = [
   { to: '/#results', label: 'Results' },
   { to: '/#services', label: 'Services' },
   { to: '/#why', label: 'Why Airbrush' },
-  { to: '/book#faq', label: 'Booking FAQ' },
+  { to: '/book', label: 'Booking FAQ' },
 ];
 
 function Nav() {

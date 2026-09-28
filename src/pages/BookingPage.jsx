@@ -92,6 +92,7 @@ function BookingPage() {
                   </div>
                 </div>
               </div>
+              <p className="mt-6 text-left text-sm text-cocoa/70">Keep up with availability dates as bookings fill up quick.</p>
             </div>
           </section>
 

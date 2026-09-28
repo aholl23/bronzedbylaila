@@ -39,9 +39,10 @@
 
 html {
   scroll-behavior: smooth;
-  overscroll-behavior: auto;
+  overscroll-behavior: none auto;
   overscroll-behavior-y: auto;
   -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
 }
 
 body {
@@ -51,7 +52,8 @@ body {
   font-family: 'Jost', sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  overscroll-behavior: auto;
+  overscroll-behavior: none auto;
+  overflow-x: clip;
 }
 
 * {
