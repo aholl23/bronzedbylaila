@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('/fonts/cormorant-garamond.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Pinyon Script';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/pinyon-script.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('/fonts/jost.woff2') format('woff2');
+}
+
+:root {
+  --cream: #F4EDE1;
+  --ivory: #FBF7F0;
+  --bronze: #A67C52;
+  --bronze-deep: #8A6440;
+  --cocoa: #4A3B2C;
+  --taupe: #8C7A66;
+  --line: #E3D6C3;
+  --white: #FFFFFF;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  overscroll-behavior: auto;
+  overscroll-behavior-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--cocoa);
+  font-family: 'Jost', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overscroll-behavior: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(166, 124, 82, 0.25);
+}
+
+section {
+  scroll-margin-top: 6rem;
+}
