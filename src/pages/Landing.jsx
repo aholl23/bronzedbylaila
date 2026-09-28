@@ -39,13 +39,15 @@ function Landing() {
       <Nav />
 
       <main id="top">
-        <section className="relative flex min-h-[85vh] items-center overflow-hidden supports-[height:1svh]:min-h-[85svh] px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+        <section className="relative min-h-0 overflow-hidden md:flex md:min-h-[85vh] md:items-center md:px-6 md:py-20 md:supports-[height:1svh]:min-h-[85svh] lg:px-8 lg:py-28">
           <HeroCollage />
-          <div className="relative z-10 mx-auto flex max-w-2xl -translate-y-10 flex-col items-center px-4 py-1.5 text-center sm:-translate-y-12 lg:-translate-y-16">
-            <HeroSun className="h-32 w-[21rem] text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.55)] sm:h-44 sm:w-[28rem]" />
-            <div className="-mt-5 -ml-8 lg:-mt-8">
-              <p className="font-script text-8xl leading-none text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.55)] sm:text-9xl lg:text-[10rem]">Bronzed</p>
-              <p className="mt-5 text-base font-semibold uppercase tracking-[0.55em] text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.55)]">— BY LAILA</p>
+          <div className="absolute inset-0 z-10 flex items-center justify-center px-4 md:contents">
+            <div className="relative z-10 mx-auto flex max-w-2xl -translate-y-10 flex-col items-center px-4 py-1.5 text-center sm:-translate-y-12 lg:-translate-y-16">
+              <HeroSun className="h-32 w-[21rem] text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.55)] sm:h-44 sm:w-[28rem]" />
+              <div className="-mt-5 -ml-8 lg:-mt-8">
+                <p className="font-script text-8xl leading-none text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.55)] sm:text-9xl lg:text-[10rem]">Bronzed</p>
+                <p className="mt-5 text-base font-semibold uppercase tracking-[0.55em] text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.55)]">— BY LAILA</p>
+              </div>
             </div>
           </div>
         </section>
